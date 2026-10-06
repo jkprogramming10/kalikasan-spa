@@ -1,0 +1,107 @@
+import type { StaticImageData } from "next/image";
+
+import coffeeScrub from "@/assets/images/coffee-scrub.jpg";
+import facialMassage from "@/assets/images/facial-massage.jpg";
+import hotStone from "@/assets/images/hot-stone.jpg";
+import loungeEjKnows from "@/assets/images/lounge-ejknows.jpg";
+import moringaScrub from "@/assets/images/moringa-scrub.jpg";
+import receptionEjKnows from "@/assets/images/reception-ejknows.jpg";
+import roseScrub from "@/assets/images/rose-scrub.jpg";
+import saunaGuests from "@/assets/images/sauna-guests.jpg";
+import saunaRoomEjKnows from "@/assets/images/sauna-room-ejknows.jpg";
+import signatureMassage from "@/assets/images/signature-massage.jpg";
+import suob from "@/assets/images/suob.jpg";
+import treatmentRoom from "@/assets/images/treatment-room.jpg";
+import treatmentRoomDetail from "@/assets/images/treatment-room-detail.jpg";
+import ventosa from "@/assets/images/ventosa.jpg";
+import waterWallEjKnows from "@/assets/images/water-wall-ejknows.jpg";
+import welcomeTrayEjKnows from "@/assets/images/welcome-tray-ejknows.jpg";
+
+export interface SpaImage {
+  src: StaticImageData;
+  alt: string;
+  /**
+   * Photographer credit shown next to the image. Set for third-party photos
+   * whose ownership has not been confirmed. Images with a credit are always
+   * displayed uncropped so any watermark stays visible.
+   */
+  credit?: string;
+}
+
+const EJ_KNOWS = "EJ Knows";
+
+/**
+ * Every photo used on the site. Files in src/assets/images are generated from
+ * the original folders by `npm run images` (see scripts/prepare-images.mjs).
+ */
+export const images = {
+  treatmentRoom: {
+    src: treatmentRoom,
+    alt: "A Kalikasan Spa treatment room with a green-draped massage bed, a woven-print robe on a bamboo ladder and tall potted ferns",
+  },
+  treatmentRoomDetail: {
+    src: treatmentRoomDetail,
+    alt: "A massage bed draped in green with a woven-print robe hanging on a bamboo ladder",
+  },
+  facialMassage: {
+    src: facialMassage,
+    alt: "A guest relaxing with eyes closed during a gentle face and head massage",
+  },
+  signatureMassage: {
+    src: signatureMassage,
+    alt: "A therapist's hands massaging a guest's shoulder above a draped batik cloth",
+  },
+  hotStone: {
+    src: hotStone,
+    alt: "Smooth dark heated stones placed along a guest's back during a hot stone massage",
+  },
+  ventosa: {
+    src: ventosa,
+    alt: "A therapist placing a warmed glass cup on a guest's back during ventosa cupping",
+  },
+  suob: {
+    src: suob,
+    alt: "A wooden suob steam basin filled with herbal leaves, set beside a towel-draped chair",
+  },
+  roseScrub: {
+    src: roseScrub,
+    alt: "A therapist applying a rose petal scrub across a guest's back",
+  },
+  moringaScrub: {
+    src: moringaScrub,
+    alt: "Green moringa and salt scrub being massaged into a guest's back",
+  },
+  coffeeScrub: {
+    src: coffeeScrub,
+    alt: "A therapist's hand spreading a coffee scrub over a guest's shoulder",
+  },
+  saunaGuests: {
+    src: saunaGuests,
+    alt: "Two guests wrapped in towels smiling at each other inside the sauna",
+  },
+  lounge: {
+    src: loungeEjKnows,
+    alt: "The reception lounge with a rattan sofa, leaf-print cushions, white orchids and woven pendant lanterns",
+    credit: EJ_KNOWS,
+  },
+  reception: {
+    src: receptionEjKnows,
+    alt: "The Kalikasan Spa reception with its carved wooden sign, rattan furniture and a canopy of woven lanterns",
+    credit: EJ_KNOWS,
+  },
+  saunaRoom: {
+    src: saunaRoomEjKnows,
+    alt: "The infrared sauna cabin in a warmly lit room with wooden chairs and a tall leafy plant",
+    credit: EJ_KNOWS,
+  },
+  waterWall: {
+    src: waterWallEjKnows,
+    alt: "An illuminated water wall framed by stone tiles and lush tropical greenery",
+    credit: EJ_KNOWS,
+  },
+  welcomeTray: {
+    src: welcomeTrayEjKnows,
+    alt: "A glass of iced tea on a wooden tray with a rolled white towel and lotus blossoms",
+    credit: EJ_KNOWS,
+  },
+} satisfies Record<string, SpaImage>;

@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #f8f4ec;
+  --color-cream: #efe6d8;
+  --color-sage: #a8b59a;
+  --color-forest: #2f4236;
+  --color-deep: #1e2a22;
+  --color-gold: #b08d57;
+  --color-gold-text: #8a6a38;
+
+  --animate-rise: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@theme inline {
+  --font-display: var(--font-cormorant), "Iowan Old Style", "Times New Roman", serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Lock page scroll while the mobile menu dialog is open. */
+  html:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-deep);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-sage);
+    color: var(--color-deep);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 3px;
+  }
+
+  /* Dark sections switch the focus ring to ivory for contrast. */
+  .surface-dark :focus-visible {
+    outline-color: var(--color-ivory);
+  }
+}
+
+/*
+ * Italic display text uses the dedicated italic font instance (see layout.tsx).
+ * Kept outside @layer so it overrides the font-display utility on the same element.
+ */
+.font-display em,
+.font-display .italic,
+em.font-display,
+.font-display.italic {
+  font-family: var(--font-cormorant-italic), var(--font-cormorant), serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
