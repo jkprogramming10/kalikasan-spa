@@ -8,8 +8,8 @@
  * Rules followed:
  * - Service posters are cropped to their photographic area so baked-in poster
  *   text is not shown on the website.
- * - Photos carrying the third-party "EJ Knows" watermark are never cropped;
- *   they are only resized, so the watermark stays fully visible.
+ * - Photos carrying the third-party "EJ Knows" watermark (design/ folder, all but
+ *   the treatment room) are not used at all, so no derived image contains it.
  *
  * Run with: npm run images
  */
@@ -99,36 +99,30 @@ const jobs = [
     note: "Busilak ng Kalikasan poster, top-right photo area.",
   },
 
-  // ---------- "EJ Knows" photos: resized only, never cropped ----------
+  // ---------- More clean poster photo areas (no text, logo or watermark) ----------
   {
-    out: "lounge-ejknows.jpg",
-    src: "design/494643876_664890322963737_3954538889003273538_n.jpg",
-    maxWidth: 1200,
-    note: "Lounge. Third-party watermark kept visible (not cropped).",
+    out: "massage-hands.jpg",
+    src: "services/559327042_788074327312002_1230013616953094974_n.jpg",
+    crop: { left: 600, top: 0, width: 480, height: 400 },
+    note: "Haplos ng Kagalingan poster, top-right photo area.",
   },
   {
-    out: "reception-ejknows.jpg",
-    src: "design/495132407_664890362963733_4995942472230426199_n.jpg",
-    maxWidth: 1200,
-    note: "Reception with Kalikasan sign. Watermark kept visible.",
+    out: "suob-chair.jpg",
+    src: "services/559327042_788074327312002_1230013616953094974_n.jpg",
+    crop: { left: 690, top: 440, width: 390, height: 470 },
+    note: "Haplos ng Kagalingan poster, wooden chair and plants photo area.",
   },
   {
-    out: "sauna-room-ejknows.jpg",
-    src: "design/495527744_664890416297061_1313648953202433873_n.jpg",
-    maxWidth: 1200,
-    note: "Infrared sauna room. Watermark kept visible.",
+    out: "relaxing-massage.jpg",
+    src: "services/558923955_782630207856414_2739797026109596566_n.jpg",
+    crop: { left: 260, top: 850, width: 820, height: 500 },
+    note: "Haplos ng Kaginhawaan poster, photo area right of the logo.",
   },
   {
-    out: "water-wall-ejknows.jpg",
-    src: "design/494901742_664890369630399_7605073176929059973_n.jpg",
-    maxWidth: 1200,
-    note: "Water wall garden. Watermark kept visible.",
-  },
-  {
-    out: "welcome-tray-ejknows.jpg",
-    src: "design/494681012_664890392963730_8170284732053475884_n.jpg",
-    maxWidth: 1200,
-    note: "Welcome drink tray. Watermark kept visible.",
+    out: "moving-ventosa.jpg",
+    src: "services/560439066_793456733440428_8055082203341534897_n.jpg",
+    crop: { left: 220, top: 0, width: 860, height: 570 },
+    note: "Moving Ventosa poster, photo area right of the logo, above the benefits box.",
   },
 ];
 

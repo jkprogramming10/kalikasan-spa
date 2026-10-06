@@ -20,7 +20,7 @@ export function About() {
       <Container className="grid items-center gap-12 md:grid-cols-12 md:gap-10 lg:gap-16">
         <div className="mx-auto w-full max-w-sm md:col-span-5 md:max-w-none">
           <CreditedPhoto
-            image={images.reception}
+            image={images.relaxingMassage}
             sizes="(min-width: 1024px) 28rem, (min-width: 768px) 38vw, 24rem"
             imageClassName="rounded-[1.75rem]"
           />

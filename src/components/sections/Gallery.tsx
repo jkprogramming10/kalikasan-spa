@@ -3,14 +3,13 @@ import { CreditedPhoto } from "@/components/ui/CreditedPhoto";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { images, type SpaImage } from "@/lib/images";
 
-// Three tall interiors and three square treatment shots, ordered so that each
-// masonry column on desktop holds one of each and the columns stay balanced.
+// Clean photos only. Interior shots carrying a third-party watermark are not used.
 const galleryImages: readonly SpaImage[] = [
-  images.lounge,
   images.facialMassage,
-  images.waterWall,
+  images.massageHands,
+  images.suobChair,
+  images.signatureMassage,
   images.coffeeScrub,
-  images.saunaRoom,
   images.moringaScrub,
 ];
 
@@ -23,7 +22,7 @@ export function Gallery() {
           eyebrow="The Atmosphere"
           tone="tinted"
           title="Step inside our sanctuary"
-          intro="Warm light through woven lanterns, the hush of a water wall, the scent of herbs and oils. A glimpse of the space that awaits you."
+          intro="Unhurried hands, natural scrubs of coffee and moringa, and quiet corners set for rest. A glimpse of the care that awaits you."
           align="center"
         />
 

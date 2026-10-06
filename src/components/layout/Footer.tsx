@@ -81,7 +81,6 @@ export function Footer() {
           <p>
             &copy; {year} {siteConfig.name}. All rights reserved.
           </p>
-          <p>Photos marked &ldquo;EJ Knows&rdquo; are credited to EJ Knows.</p>
         </Container>
       </div>
     </footer>

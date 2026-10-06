@@ -51,7 +51,7 @@ export function WhyChooseUs() {
 
         <div className="mx-auto w-full max-w-sm lg:col-span-5 lg:max-w-none">
           <CreditedPhoto
-            image={images.welcomeTray}
+            image={images.movingVentosa}
             sizes="(min-width: 1024px) 26rem, 24rem"
             imageClassName="rounded-[1.75rem]"
           />

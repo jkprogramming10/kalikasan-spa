@@ -3,19 +3,18 @@ import type { StaticImageData } from "next/image";
 import coffeeScrub from "@/assets/images/coffee-scrub.jpg";
 import facialMassage from "@/assets/images/facial-massage.jpg";
 import hotStone from "@/assets/images/hot-stone.jpg";
-import loungeEjKnows from "@/assets/images/lounge-ejknows.jpg";
+import massageHands from "@/assets/images/massage-hands.jpg";
 import moringaScrub from "@/assets/images/moringa-scrub.jpg";
-import receptionEjKnows from "@/assets/images/reception-ejknows.jpg";
+import movingVentosa from "@/assets/images/moving-ventosa.jpg";
+import relaxingMassage from "@/assets/images/relaxing-massage.jpg";
 import roseScrub from "@/assets/images/rose-scrub.jpg";
 import saunaGuests from "@/assets/images/sauna-guests.jpg";
-import saunaRoomEjKnows from "@/assets/images/sauna-room-ejknows.jpg";
 import signatureMassage from "@/assets/images/signature-massage.jpg";
 import suob from "@/assets/images/suob.jpg";
+import suobChair from "@/assets/images/suob-chair.jpg";
 import treatmentRoom from "@/assets/images/treatment-room.jpg";
 import treatmentRoomDetail from "@/assets/images/treatment-room-detail.jpg";
 import ventosa from "@/assets/images/ventosa.jpg";
-import waterWallEjKnows from "@/assets/images/water-wall-ejknows.jpg";
-import welcomeTrayEjKnows from "@/assets/images/welcome-tray-ejknows.jpg";
 
 export interface SpaImage {
   src: StaticImageData;
@@ -27,8 +26,6 @@ export interface SpaImage {
    */
   credit?: string;
 }
-
-const EJ_KNOWS = "EJ Knows";
 
 /**
  * Every photo used on the site. Files in src/assets/images are generated from
@@ -79,29 +76,20 @@ export const images = {
     src: saunaGuests,
     alt: "Two guests wrapped in towels smiling at each other inside the sauna",
   },
-  lounge: {
-    src: loungeEjKnows,
-    alt: "The reception lounge with a rattan sofa, leaf-print cushions, white orchids and woven pendant lanterns",
-    credit: EJ_KNOWS,
+  relaxingMassage: {
+    src: relaxingMassage,
+    alt: "A therapist's hand resting on a guest's back during a relaxing massage",
   },
-  reception: {
-    src: receptionEjKnows,
-    alt: "The Kalikasan Spa reception with its carved wooden sign, rattan furniture and a canopy of woven lanterns",
-    credit: EJ_KNOWS,
+  movingVentosa: {
+    src: movingVentosa,
+    alt: "A therapist guiding a glass cup along a guest's back during moving ventosa",
   },
-  saunaRoom: {
-    src: saunaRoomEjKnows,
-    alt: "The infrared sauna cabin in a warmly lit room with wooden chairs and a tall leafy plant",
-    credit: EJ_KNOWS,
+  massageHands: {
+    src: massageHands,
+    alt: "A therapist's hands working across a guest's shoulder blade",
   },
-  waterWall: {
-    src: waterWallEjKnows,
-    alt: "An illuminated water wall framed by stone tiles and lush tropical greenery",
-    credit: EJ_KNOWS,
-  },
-  welcomeTray: {
-    src: welcomeTrayEjKnows,
-    alt: "A glass of iced tea on a wooden tray with a rolled white towel and lotus blossoms",
-    credit: EJ_KNOWS,
+  suobChair: {
+    src: suobChair,
+    alt: "A wooden chair draped with a brown towel, a rolled green towel on its seat, beside leafy plants",
   },
 } satisfies Record<string, SpaImage>;
