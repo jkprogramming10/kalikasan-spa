@@ -50,10 +50,10 @@ export function Testimonials() {
               &ldquo;
             </span>
             <p className="mt-2 font-display text-2xl leading-snug text-balance text-forest sm:text-3xl">
-              Guest stories are on their way.
+              Reserved for stories shared with permission.
             </p>
             <p className="mt-4 leading-relaxed text-deep/75">
-              We are gathering reviews from our guests, to be shared here with their permission.
+              Alongside the feedback guests share on Facebook, this space will feature selected testimonials that our guests have personally invited us to publish.
             </p>
             {facebookUrl && (
               <div className="mt-8">

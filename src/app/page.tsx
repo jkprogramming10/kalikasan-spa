@@ -2,6 +2,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
+import { CustomerFeedback } from "@/components/sections/CustomerFeedback";
 import { ExperienceKalikasan } from "@/components/sections/ExperienceKalikasan";
 import { FeaturedExperience } from "@/components/sections/FeaturedExperience";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -71,6 +72,7 @@ export default function Home() {
         <ExperienceKalikasan />
         <WhyChooseUs />
         <Gallery />
+        <CustomerFeedback />
         <Testimonials />
         <FinalCta />
         <Contact />
