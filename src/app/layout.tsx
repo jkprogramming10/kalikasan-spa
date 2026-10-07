@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import { siteConfig } from "@/data/site";
 import "./globals.css";
@@ -80,7 +81,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${cormorant.variable} ${cormorantItalic.variable} ${manrope.variable} antialiased`}>
-      <body className="min-h-dvh">{children}</body>
+      <body className="min-h-dvh">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
